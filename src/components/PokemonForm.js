@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { BsFillAirplaneEnginesFill } from 'react-icons/bs';
+import { toast } from 'react-toastify';
 
 export default class PokemonForm extends Component {
   state = {
@@ -12,6 +13,13 @@ export default class PokemonForm extends Component {
 
   handleSubmit = (e) => {
     e.preventDefault();
+
+    // trim() - обрезает пробелы строки справа и слева
+    if (this.state.pokemonName.trim() === '') {
+      toast.error('Enter pokemon name!');
+
+      return;
+    }
 
     this.props.onSubmit(this.state.pokemonName);
 
