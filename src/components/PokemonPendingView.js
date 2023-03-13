@@ -12,6 +12,7 @@ const LoadingContainer = styled.div`
 `;
 
 export default function PokemonPendingView({ pokemonName }) {
+  // ! Делаем скелет объекта покемона
   const pokemon = {
     name: pokemonName,
     sprites: {

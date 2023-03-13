@@ -33,11 +33,6 @@ export default class PokemonInfo extends Component {
     }
   }
 
-  //   idle;
-  //   pending;
-  //   resolved;
-  //   rejected;
-
   render() {
     const { pokemon, error, status } = this.state;
     const { pokemonName } = this.props;
@@ -59,21 +54,3 @@ export default class PokemonInfo extends Component {
     }
   }
 }
-
-// return (
-//     <div>
-//       {error && (
-//         <div>
-//           <h2>Everything crashed, there is no pokemon with this name: {pokemonName}</h2>
-//         </div>
-//       )}
-//       {loading && <div>Loading...</div>}
-//       {!pokemonName && <div>Enter pokemon name.</div>}
-//       {pokemon && (
-//         <div>
-//           <p>{pokemon.name}</p>
-//           <img src={pokemon.sprites.other['official-artwork'].front_default} alt="pokemonImage" width={300} />
-//         </div>
-//       )}
-//     </div>
-//   );
