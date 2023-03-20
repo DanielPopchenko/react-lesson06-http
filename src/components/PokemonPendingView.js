@@ -1,4 +1,6 @@
 import React from "react";
+import pendingImage from "../question.png";
+import PokemonDataView from "./PokemonDataView";
 
 export default function PokemonPendingView({ pokemonName }) {
   const pokemon = {
@@ -12,5 +14,10 @@ export default function PokemonPendingView({ pokemonName }) {
     stats: [],
   };
 
-  return <div>PokemonPendingView</div>;
+  return (
+    <div role="alert">
+      <p>Loading...</p>
+      <PokemonDataView pokemon={pokemon} />
+    </div>
+  );
 }
